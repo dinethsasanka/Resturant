@@ -87,7 +87,7 @@ body::before {
     padding: 40px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.021);
     backdrop-filter: blur(5px);
     transition: transform 0.3s ease-in-out;
 }
@@ -97,8 +97,8 @@ body::before {
 }
 
 .about-us h1 {
+    font-size: 80pt;
     text-align: center;
-    font-size: 4rem;
     color: #11aecdd9;
     margin-bottom: 30px;
     text-shadow: 1px 1px 5px #00000077;
@@ -122,55 +122,65 @@ body::before {
 /* ==== Services SECTION ==== */
 
 .services {
+    display: flex;
+    flex-direction:row;  /* arrange children vertically */
+    align-items: center;      /* center horizontally */
     max-width: 90%;
     margin: 50px auto;
     padding: 40px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
-    transition: transform 0.3ms ease-in-out;
-}
-
-.services:hover {
-    transform: scale(1.02); /* subtle zoom on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(3px);  /* fixed from -2px to positive */
+    transition: transform 0.3s ease-in-out;  /* fixed from 0.3ms to 0.3s */
     
 }
+.services:hover {
+    transform: scale(1.02); /* subtle zoom on hover */
+}
+
 .services h1 {
-    text-align: center;
-    font-size: 4rem;
-    color:#11aecdd9;
+    font-size: 80pt;
+    color: #11aecdd9;
     margin-bottom: 30px;
     text-shadow: 1px 1px 5px #00000077;
-}
-.services dl {
-    font-size: 2.5rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #f0f0f0;
     text-align: center;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-    transition: all 0.3s ease;
 }
-.services dt {
-    font-weight: bold;
-    font-size: 3rem;
-    color: #87e821fd;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+
+.service-item {
+    text-align: center;
+    margin-bottom: 50px;
 }
-.services dl:hover {
+
+.service-item img {
+    display: inline-flex;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 1000px; /* fixed from 100% to 1500px */
+    height: 1000px; /* fixed from auto to 1500px */
+    transition: transform 0.3s ease-in-out;
+}
+
+.desc h2 {
+    margin-top: 40px;
+    color: #fff;
+}
+
+.desc h2:hover {
     color: #ffffff;
     transform: translateY(-2px);
 }
-.services dd:hover {
+
+.desc p:hover {
     color: #ffffff;
     transform: translateY(-2px);
 }
-.services dt:hover {
-    color: #ffffff;
-    transform: translateY(-2px);
+.desc p {
+    font-size: 25px;
+    max-width: 600px;
+    margin: 0 auto;
 }
+
 
 
 /* ==== Gallery SECTION ==== */
@@ -187,7 +197,7 @@ body::before {
 }
 .main-gal h1 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 80pt;
     color: #11aecdda;
     margin-bottom: 30px;
     text-shadow: 1px 1px 5px #00000077;
@@ -211,6 +221,7 @@ body::before {
     }
 
 .desc{
+text-align: center;
  font-size:40px;
  font-style: italic;
 }
@@ -218,5 +229,7 @@ div.gallery:hover {
   border: 1px solid #777;
   box-shadow: none;
 }
+
+
 
 
