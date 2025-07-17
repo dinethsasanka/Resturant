@@ -1,6 +1,9 @@
 /* ==== NAVIGATION BAR ==== */
 nav {
     display: block;
+    outline-style:outset;
+    outline-width: thick;
+    outline-color: rgb(22, 22, 22);
     background-color: rgba(68, 128, 131, 0.3); /* Soft transparent background */
     color: white;
     padding: 15px 30px;
